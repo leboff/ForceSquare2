@@ -1,4 +1,6 @@
 require 'httparty'
+require 'hashie'
+require 'hashie/mash'
 class Poster
   def initialize(data)
     mdata = Mash.new(data)
