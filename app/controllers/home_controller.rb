@@ -10,8 +10,12 @@ class HomeController < ApplicationController
     end
   end
   def salesforce
-    respond_to do |format|
-      format.html
+    if current_user.salesforce_orgs.nil?
+      respond_to do |format|
+        format.html
+      end
+    else
+      redirect_to '/settings'
     end
   end
   def settings

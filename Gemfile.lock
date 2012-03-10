@@ -141,6 +141,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise
   jquery-rails
+  json
   omniauth-foursquare
   omniauth-salesforce
   pg

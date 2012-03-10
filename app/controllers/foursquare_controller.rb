@@ -1,5 +1,6 @@
 class FoursquareController < ApplicationController
   def index
-    Rails.logger.info params.to_yaml
+    data = json.parse(param[:checkin])
+    Rails.logger.warn data.to_yaml
   end
 end
