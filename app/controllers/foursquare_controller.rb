@@ -1,9 +1,9 @@
 
 class FoursquareController < ApplicationController
   def index
-    data = JSON.parse(params[:checkin], params[:secret]) if params[:checkin] && params[:secret]
+    data = JSON.parse(params[:checkin]) if params[:checkin]
     if data
-      p = Poster.new(data)
+      p = Poster.new(data, params[:secret])
       if p.post_to_salesforce
         render :text=> 'completed successfully', :success=>true, :status=> :ok
       else
