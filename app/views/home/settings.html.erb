@@ -1,7 +1,11 @@
+<div id="sign-out">
+  <%= link_to link_to 'Sign Out', destroy_user_session_path %>
+</div>
 <div id="settings">
 
   <%=  image_tag('settings.png',  :alt => 'settings' )%>
 </div>
+
 <div class="menu_div">
 <ul>
     <% current_user.salesforce_orgs.each do |org| %>

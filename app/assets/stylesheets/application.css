@@ -117,3 +117,27 @@ background-image:url('brushedbg.jpg');
     border-style: none;
     margin: 8px;
 }
+#sign-out{
+    display:block;
+    font-family: Verdana, Geneva, Arial, sans-serif;
+    /*set the div in the top right corner*/
+    position:absolute;
+    top:0;
+    right:0;
+    width:100px;
+
+    /*give it some background and border*/
+    background:#333333;
+    border:1px solid #ddd;
+}
+#sign-out a
+{
+    text-align: right;
+	text-decoration:none;
+	color:#FFF;
+
+}
+#sign-out:hover
+{
+	background:#3ea5ea;
+}

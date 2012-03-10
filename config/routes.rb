@@ -1,11 +1,11 @@
 ForceSquare2::Application.routes.draw do
 
+  match '/users/sign_in' => 'home#index'
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
-  devise_for :users
+  devise_for :users, :skip => :sessions
   resources :salesforce_orgs do
     delete :delete, :on => :member
   end
-  match '/users/sign_in' => 'home#index'
   match '/salesforce' => 'home#salesforce'
   match '/settings' => 'home#settings'
   match '/foursquare' => 'foursquare#index'
