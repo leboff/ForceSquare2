@@ -1,9 +1,7 @@
 require 'httparty'
-require 'hashie'
-require 'hashie/mash'
 class Poster
   def initialize(data)
-    mdata = Mash.new(data)
+    mdata = Hashie::Mash.new(data)
     Rails.logger.info mdata.to_yaml
     @id = mdata.user.id
     @venue_name = mdata.venue.name
