@@ -33,6 +33,10 @@ GEM
     attr_encrypted (1.2.0)
       encryptor (>= 1.1.1)
     bcrypt-ruby (3.0.1)
+    bitly (0.7.0)
+      crack (>= 0.1.4)
+      httparty (>= 0.7.6)
+      oauth2 (~> 0.5.0)
     builder (3.0.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -41,6 +45,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.2.0)
+    crack (0.3.1)
     devise (2.0.4)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.0.3)
@@ -142,6 +147,7 @@ PLATFORMS
 
 DEPENDENCIES
   attr_encrypted
+  bitly
   coffee-rails (~> 3.2.1)
   devise
   httparty
