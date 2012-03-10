@@ -4,20 +4,17 @@ class Poster
    include HTTParty
    format :json
 
-  def initialize(data)
+  def initialize(data, secret)
     mdata = Hashie::Mash.new(data)
     @user = User.find_by_foursquare_id(mdata.user.id)
     @venue_name = mdata.venue.name
     @checkin_id = mdata.id
-    @secret = mdata.secret
+    @secret = secret
     @bitly = Bitly.new('leboff', 'R_a08016d3520db7a24658de32f04dc51b')
   end
 
 
   def post_to_salesforce
-    Rails.logger.warn @user.inspect
-    Rails.logger.warn @secret.inspect
-    Rails.logger.warn FOURSQUARE_PUSH_SECRET
     if @user &&  @secret == FOURSQUARE_PUSH_SECRET
       @user.salesforce_orgs.each do |org|
           headers =  {'Content-Type' => 'application/x-www-form-urlencoded', 'Authorization' => 'OAuth ' + access_token(org.instance, org.token) }
