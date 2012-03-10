@@ -8,6 +8,7 @@ class Poster
     @id = mdata.user.id
     @venue_name = mdata.venue.name
     @checkin_id = mdata.id
+    @bitly = Bitly.new('leboff', 'R_a08016d3520db7a24658de32f04dc51b')
   end
   def post_to_salesforce
     the_user.salesforce_orgs.each do |org|
@@ -21,10 +22,7 @@ class Poster
     User.find_by_foursquare_id(@id)
   end
   def url
-     bitly.shorten(the_user.foursquare_url + '/checkin/' +@checkin_id ).short_url
+     @bitly.shorten(the_user.foursquare_url + '/checkin/' +@checkin_id ).short_url
   end
-  def bitly
-    Bitly.use_api_version_3
-    @bitly = Bitly.new('leboff', 'R_a08016d3520db7a24658de32f04dc51b') unless @bitly
-  end
+
 end

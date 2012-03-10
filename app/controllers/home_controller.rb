@@ -2,7 +2,7 @@ class HomeController < ApplicationController
   before_filter :authenticate_user!, :except => :index
   def index
     if user_signed_in?
-      #redirect to somewhere else
+      redirect_to '/settings'
     else
       respond_to do |format|
         format.html
