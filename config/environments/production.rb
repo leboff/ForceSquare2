@@ -64,4 +64,10 @@ ForceSquare2::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+
+  FOURSQUARE_ID = 'VJ53HGT24SLNAAZ4TTCFNJ4JLGLWMZ4XZAKHOPEK2Z3502AZ'
+  FOURSQUARE_SECRET = 'DCR1LAEPPSRNC2TJ5JZVHRFXUGA05K1L40TFTN2MSISWQZPE'
+
+  SALESFORCE_ID ='3MVG9rFJvQRVOvk78XkPfh98VhCRwHyoRSYNLH7vO8DnWiJaAYJqt0wwTRe2KUTgBpQXxi8mJeY1dLvMUCwuI'
+  SALESFORCE_SECRET ='4399226740537315762'
 end
