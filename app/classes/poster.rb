@@ -18,7 +18,7 @@ class Poster
     User.find_by_foursquare_id(@id)
   end
   def url
-     bitly.shorten(the_user.foursquare_url + '/checkin/' +checkin_id ).short_url
+     bitly.shorten(the_user.foursquare_url + '/checkin/' +@checkin_id ).short_url
   end
   def bitly
     Bitly.use_api_version_3
