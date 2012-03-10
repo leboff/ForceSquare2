@@ -10,7 +10,7 @@ class HomeController < ApplicationController
     end
   end
   def salesforce
-    if current_user.salesforce_orgs.nil?
+    if current_user.salesforce_orgs.empty?
       respond_to do |format|
         format.html
       end
