@@ -12,10 +12,11 @@ class Poster
   end
   def post_to_salesforce
     the_user.salesforce_orgs.each do |org|
-        @headers =  {'Content-Type' => 'application/x-www-form-urlencoded', 'Authorization' => 'OAuth ' + org.token }
+        headers =  {'Content-Type' => 'application/x-www-form-urlencoded', 'Authorization' => 'OAuth ' + org.token }
         options ={ :body =>{ :text => "I just checked in to #{@venue_name} on Forcesquare! " + url, },
-                :headers =>  @headers }
+                :headers =>  headers }
         resp = self.class.post(org.instance+'/services/data/v23.0/chatter/feeds/to/me/feed-items', options)
+        Rails.logger.warn resp.to_yaml
     end
   end
   def the_user
