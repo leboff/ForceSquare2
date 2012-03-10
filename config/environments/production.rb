@@ -65,6 +65,8 @@ ForceSquare2::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
+  config.to_prepare { Devise::SessionsController.force_ssl }
+  config.to_prepare { Devise::RegistrationsController.force_ssl }
   FOURSQUARE_ID = 'VJ53HGT24SLNAAZ4TTCFNJ4JLGLWMZ4XZAKHOPEK2Z3502AZ'
   FOURSQUARE_SECRET = 'DCR1LAEPPSRNC2TJ5JZVHRFXUGA05K1L40TFTN2MSISWQZPE'
 

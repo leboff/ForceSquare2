@@ -38,6 +38,9 @@ ForceSquare2::Application.configure do
   #devise mailer
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
+
+  config.to_prepare { Devise::SessionsController.force_ssl }
+  config.to_prepare { Devise::RegistrationsController.force_ssl }
   FOURSQUARE_ID = 'VTOK1YRITEPDJ1DTUUMV43M0H0ERL2KOKRAJ2RYGBWHV3A25'
   FOURSQUARE_SECRET = 'R4MQB3T445532OBIW3OP2RJX1SHYQDACAED1XO240MHHEGGW'
 

@@ -5,7 +5,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     if @user.persisted?
       flash[:notice] = I18n.t "devise.omniauth_callbacks.success", :kind => "Foursquare"
-      redirect_to '/salesforce'
+      sign_in_and_redirect @user
     else
       session["devise.foursquare_data"] = request.env["omniauth.auth"]
       redirect_to new_user_registration_url
