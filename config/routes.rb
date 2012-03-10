@@ -1,6 +1,7 @@
 ForceSquare2::Application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   devise_for :users
+  match '/users/sign_in' => 'home#index'
   match '/salesforce' => 'home#salesforce'
   match '/settings' => 'home#settings'
   match '/foursquare' => 'foursquare#index'
