@@ -15,7 +15,9 @@ class Poster
 
 
   def post_to_salesforce
-    ##TODO: error checks
+    Rails.logger.warn @user.inspect
+    Rails.logger.warn @secret.inspect
+    Rails.logger.warn FOURSQUARE_PUSH_SECRET
     if @user &&  @secret == FOURSQUARE_PUSH_SECRET
       @user.salesforce_orgs.each do |org|
           headers =  {'Content-Type' => 'application/x-www-form-urlencoded', 'Authorization' => 'OAuth ' + access_token(org.instance, org.token) }
@@ -33,7 +35,6 @@ class Poster
      @bitly.shorten(@user.foursquare_url + '/checkin/' +@checkin_id ).short_url
   end
   def access_token(instance, refresh)
-    ##TODO: error checks
     headers =  {'Content-Type' => 'application/x-www-form-urlencoded'}
     options = {:headers=>headers, :body =>{ :grant_type => 'refresh_token', :client_id => SALESFORCE_ID, :client_sercret => SALESFORCE_SECRET, :refresh_token => refresh}}
     resp = self.class.post(instance + '/services/oauth2/token', options)
