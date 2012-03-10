@@ -23,11 +23,14 @@ class Poster
                   :headers =>  headers }
           resp = self.class.post(org.instance+'/services/data/v23.0/chatter/feeds/to/me/feed-items', options)
       end
+      true
+    else
+      false
     end
   end
 
   def url
-     @bitly.shorten(the_user.foursquare_url + '/checkin/' +@checkin_id ).short_url
+     @bitly.shorten(@user.foursquare_url + '/checkin/' +@checkin_id ).short_url
   end
   def access_token(instance, refresh)
     ##TODO: error checks
