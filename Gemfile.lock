@@ -81,6 +81,9 @@ GEM
     omniauth-oauth2 (1.0.0)
       oauth2 (~> 0.5.0)
       omniauth (~> 1.0)
+    omniauth-salesforce (1.0.3)
+      omniauth (~> 1.0)
+      omniauth-oauth2 (~> 1.0)
     orm_adapter (0.0.6)
     pg (0.13.2)
     polyglot (0.3.3)
@@ -139,6 +142,7 @@ DEPENDENCIES
   devise
   jquery-rails
   omniauth-foursquare
+  omniauth-salesforce
   pg
   rails (= 3.2.2)
   sass-rails (~> 3.2.3)

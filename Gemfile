@@ -23,6 +23,7 @@ end
 #user auth stuff
 gem 'devise'
 gem "omniauth-foursquare"
+gem 'omniauth-salesforce'
 gem 'attr_encrypted'
 
 gem 'jquery-rails'
