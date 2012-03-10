@@ -2,6 +2,7 @@ require 'httparty'
 class Poster
   def initialize(data)
     mdata = Mash.new(data)
+    Rails.logger.info mdata.to_yaml
     @id = mdata.user.id
     @venue_name = mdata.venue.name
     @checkin_id = mdata.id
