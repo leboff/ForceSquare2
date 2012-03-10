@@ -150,6 +150,7 @@ DEPENDENCIES
   bitly
   coffee-rails (~> 3.2.1)
   devise
+  hashie
   httparty
   jquery-rails
   json

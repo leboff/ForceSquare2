@@ -32,6 +32,7 @@ gem 'jquery-rails'
 gem 'json'
 gem 'httparty'
 gem 'bitly'
+gem 'hashie'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
