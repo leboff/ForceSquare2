@@ -1,6 +1,8 @@
 require 'rubygems'
 require 'httparty'
 class Poster
+   include HTTParty
+   format :json
   def initialize(data)
     mdata = Hashie::Mash.new(data)
     @id = mdata.user.id
