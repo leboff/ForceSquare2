@@ -1,1 +1,10 @@
-FIRST LOGIN TO FOURSQUARE <p><%= link_to "Sign in with Foursquare", user_omniauth_authorize_path(:foursquare) %></p>
+<div id="foursquare-login">
+
+  <%=  image_tag('login-foursquare.png',  :alt => 'login to foursquare' )%>
+</div>
+   <div id="foursquare">
+  <%= link_to image_tag('connect-blue@2x.png', :border=>0), user_omniauth_authorize_path(:foursquare) %>
+       </div>
+<div id="arrow" >
+         <%=  image_tag('arrow.png', :alt => 'this is an arrow', :height=> '140', :width => '120') %>
+        </div>

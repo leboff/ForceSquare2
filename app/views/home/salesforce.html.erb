@@ -1,1 +1,11 @@
-NOW CONNECT TO SALESFORCE <p><%= link_to "Sign in with Salesforce", user_omniauth_authorize_path(:salesforce) %></p>
+
+<div id="salesforce-login">
+
+  <%=  image_tag('login-salesforce.png',  :alt => 'login to salesforce' )%>
+</div>
+<div id="down-arrows">
+    <%=  image_tag('down-arrows.png',  :alt => 'these are arrows' )%>
+</div>
+  <div id="salesforce">
+  <%= link_to image_tag('sflogo.png', :border=>0 , :height=>'235', :width=>'300'), user_omniauth_authorize_path(:salesforce) %>
+       </div>

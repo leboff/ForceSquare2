@@ -1,3 +1,15 @@
-<% current_user.salesforce_orgs.each do |org| %>
-      <p><%= org.username%></p>
-<% end %>
+<div id="settings">
+
+  <%=  image_tag('settings.png',  :alt => 'settings' )%>
+</div>
+<div class="menu_div">
+<ul>
+    <% current_user.salesforce_orgs.each do |org| %>
+          <li><%= org.username%><%= button_to "delete", {:controller=>"salesforce_orgs", :action => "delete", :id => org.id }, :confirm => "Are you sure?", :method => :delete %></li>
+    <% end %>
+   <li class="add"><%= link_to 'add a salesforce org', user_omniauth_authorize_path(:salesforce) %></li>
+</ul>
+
+
+    </div>
+
