@@ -14,8 +14,9 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def salesforce
     if user_signed_in? #make sure user is signed in before assigning salesforce org
       data = request.env["omniauth.auth"]
+      Rails.logger.info data.to_yaml
       SalesforceOrg.find_or_create_by_username(:user => current_user, :username=>data.extra.username,
-                           :instance =>data.credentials.instance_url, :token => data.credentials.token)
+                           :instance =>data.credentials.instance_url, :token => data.credentials.refresh_token)
       redirect_to '/settings'
     end
   end
