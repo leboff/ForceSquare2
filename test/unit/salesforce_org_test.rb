@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class SalesforceOrgsTest < ActiveSupport::TestCase
+class SalesforceOrgTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
