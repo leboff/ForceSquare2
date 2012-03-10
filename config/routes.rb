@@ -3,6 +3,7 @@ ForceSquare2::Application.routes.draw do
   devise_for :users
   match '/salesforce' => 'home#salesforce'
   match '/settings' => 'home#settings'
+  match '/foursquare' => 'foursquare#index'
   root :to => "home#index"
 
 
