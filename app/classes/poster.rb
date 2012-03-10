@@ -1,3 +1,4 @@
+require 'rubygems'
 require 'httparty'
 class Poster
   def initialize(data)
