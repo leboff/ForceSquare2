@@ -1,9 +1,10 @@
 require 'httparty'
 class Poster
   def initialize(data)
-    @id = data.user.id
-    @venue_name = data.venue.name
-    @checkin_id = data.id
+    mdata = Mash.new(data)
+    @id = mdata.user.id
+    @venue_name = mdata.venue.name
+    @checkin_id = mdata.id
   end
   def post_to_salesforce
     the_user.salesforce_orgs.each do |org|
