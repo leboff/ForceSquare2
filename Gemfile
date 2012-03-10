@@ -20,7 +20,11 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+#user auth stuff
 gem 'devise'
+gem "omniauth-foursquare"
+gem 'attr_encrypted'
+
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
