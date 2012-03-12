@@ -47,6 +47,6 @@ ForceSquare2::Application.configure do
 
   SALESFORCE_ID ='XXXXX' # hidden to protect the innocent and changed from the checked in version
   SALESFORCE_SECRET ='XXXXX' # hidden to protect the innocent and changed from the checked in version
-  BITLY_USER = 'leboff'
-BITLY_KEY = 'R_a08016d3520db7a24658de32f04dc51b'
+  BITLY_USER = 'XXXXX'
+BITLY_KEY = 'XXXXX'
 end
