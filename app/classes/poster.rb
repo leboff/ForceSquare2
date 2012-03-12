@@ -33,7 +33,7 @@ class Poster
   end
   def access_token(instance, refresh)
     headers =  {'Content-Type' => 'application/x-www-form-urlencoded'}
-    options = {:headers=>headers, :body =>{ :grant_type => 'refresh_token', :client_id => SALESFORCE_ID, :client_sercret => SALESFORCE_SECRET, :refresh_token => refresh}}
+    options = {:headers=>headers, :body =>{ :grant_type => 'refresh_token', :client_id => ENV['SALESFORCE_ID'], :client_sercret => ENV['SALESFORCE_SECRET'], :refresh_token => refresh}}
     resp = self.class.post(instance + '/services/oauth2/token', options)
     resp["access_token"]
   end
