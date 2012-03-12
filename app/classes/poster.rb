@@ -10,7 +10,7 @@ class Poster
     @venue_name = mdata.venue.name
     @checkin_id = mdata.id
     @secret = secret
-    @bitly = Bitly.new('leboff', 'R_a08016d3520db7a24658de32f04dc51b')
+    @bitly = Bitly.new(BITLY_USER, BITLY_KEY)
   end
 
 
