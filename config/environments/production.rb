@@ -67,10 +67,13 @@ ForceSquare2::Application.configure do
 
   config.to_prepare { Devise::SessionsController.force_ssl }
   config.to_prepare { Devise::RegistrationsController.force_ssl }
-  FOURSQUARE_ID = 'XXXXX'   # hidden to protect the innocent and changed from the checked in version
-  FOURSQUARE_SECRET = 'XXXXX' # hidden to protect the innocent and changed from the checked in version
-  FOURSQUARE_PUSH_SECRET = 'XXXXX' # hidden to protect the innocent and changed from the checked in version
+  FOURSQUARE_ID = 'YTQ10QSBI4WF50RSR2AWW5GC3AISRXDQSB1KVBMDAVIB43J3'   # hidden to protect the innocent and changed from the checked in version
+  FOURSQUARE_SECRET = 'WKHEGMP2LVDYXFHRTJ1JOPL2GKKBFXHZHVS5S52IB4XFT3MZ' # hidden to protect the innocent and changed from the checked in version
+  FOURSQUARE_PUSH_SECRET = 'RSEYBS3CIKIVYITUHYHKDW0MSVJNTJWTLNZLWB0U3ATQWGG0' # hidden to protect the innocent and changed from the checked in version
 
-  SALESFORCE_ID ='XXXXX' # hidden to protect the innocent and changed from the checked in version
-  SALESFORCE_SECRET ='XXXXX' # hidden to protect the innocent and changed from the checked in version
+  SALESFORCE_ID ='3MVG9rFJvQRVOvk7DeP5m8foCDa9S_fh5b0m_UlK5jkmuGPlBMuWlFxXz.J5CqEjs12OlmqomcMq2NnP9.ymy' # hidden to protect the innocent and changed from the checked in version
+  SALESFORCE_SECRET ='8161885041987987312' # hidden to protect the innocent and changed from the checked in version
+
+  BITLY_USER = 'leboff'
+  BITLY_KEY = 'R_a08016d3520db7a24658de32f04dc51b'
 end
