@@ -41,12 +41,6 @@ ForceSquare2::Application.configure do
 
   config.to_prepare { Devise::SessionsController.force_ssl }
   config.to_prepare { Devise::RegistrationsController.force_ssl }
-  FOURSQUARE_ID = 'XXXXX' # hidden to protect the innocent and changed from the checked in version
-  FOURSQUARE_SECRET = 'XXXXX' # hidden to protect the innocent and changed from the checked in version
-  FOURSQUARE_PUSH_SECRET = 'XXXXX' # hidden to protect the innocent and changed from the checked in version
+ ##all client ids / secrets have been reset sorry charlie
 
-  SALESFORCE_ID ='XXXXX' # hidden to protect the innocent and changed from the checked in version
-  SALESFORCE_SECRET ='XXXXX' # hidden to protect the innocent and changed from the checked in version
-  BITLY_USER = 'XXXXX'
-BITLY_KEY = 'XXXXX'
 end

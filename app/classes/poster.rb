@@ -10,12 +10,12 @@ class Poster
     @venue_name = mdata.venue.name
     @checkin_id = mdata.id
     @secret = secret
-    @bitly = Bitly.new(BITLY_USER, BITLY_KEY)
+    @bitly = Bitly.new(ENV['BITLY_USER'], ENV['BITLY_KEY'])
   end
 
 
   def post_to_salesforce
-    if @user &&  @secret == FOURSQUARE_PUSH_SECRET
+    if @user &&  @secret == ENV['FOURSQUARE_PUSH_SECRET']
       @user.salesforce_orgs.each do |org|
           headers =  {'Content-Type' => 'application/x-www-form-urlencoded', 'Authorization' => 'OAuth ' + access_token(org.instance, org.token) }
           options ={ :body =>{ :text => "I just checked in to #{@venue_name} on Forcesquare! " + url, },
