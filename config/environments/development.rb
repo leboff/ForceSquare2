@@ -41,10 +41,10 @@ ForceSquare2::Application.configure do
 
   config.to_prepare { Devise::SessionsController.force_ssl }
   config.to_prepare { Devise::RegistrationsController.force_ssl }
-  FOURSQUARE_ID = 'VTOK1YRITEPDJ1DTUUMV43M0H0ERL2KOKRAJ2RYGBWHV3A25'
-  FOURSQUARE_SECRET = 'R4MQB3T445532OBIW3OP2RJX1SHYQDACAED1XO240MHHEGGW'
-  FOURSQUARE_PUSH_SECRET = '2KQGOPKWSZUOAOMAA0OZ2UP2UMYQ2MET5IJX2S2RNMGUT4UV'
+  FOURSQUARE_ID = 'XXXXX' # hidden to protect the innocent and changed from the checked in version
+  FOURSQUARE_SECRET = 'XXXXX' # hidden to protect the innocent and changed from the checked in version
+  FOURSQUARE_PUSH_SECRET = 'XXXXX' # hidden to protect the innocent and changed from the checked in version
 
-  SALESFORCE_ID ='3MVG9rFJvQRVOvk78XkPfh98VhHY3pfBnXhWxt9cFfR.JAbZ5eecZPpxcXf1ctMUlqcLR6KsX4NvpXAd9vxb4'
-  SALESFORCE_SECRET ='3821346789632136425'
+  SALESFORCE_ID ='XXXXX' # hidden to protect the innocent and changed from the checked in version
+  SALESFORCE_SECRET ='XXXXX' # hidden to protect the innocent and changed from the checked in version
 end
