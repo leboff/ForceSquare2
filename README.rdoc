@@ -5,3 +5,39 @@ ForceSquare the original was so I could play around with the FourSquare API
 == ForceSquare2
 
 ForceSquare2 will hopefully take push updates from FourSquare and post them to Chatter in as many orgs as you want
+
+== Heroku
+Please make sure to use the cedar stack, as this is rails 3.2.2
+e.g. heroku create myapp --stack cedar
+
+== Configuration
+Some environment variables need to be set in order for this to work at all (and there are no checks... so no vars = errors... which is something I should probably fix)
+
+These can be set in Heroku as follows
+heroku config:add KEY0=VALUE0 KEY1=VALUE1... KEYN=VALUEN
+
+Salesforce:
+  Where to obtain 
+    Setup->Develop->Remote Access
+  Keys
+    SALESFORCE_ID
+    SALESFORCE_SECRET
+
+Foursquare:
+  Where to obtain
+    https://foursquare.com/oauth/ | register a new consumer | enable push api
+  Keys
+    FOURSQUARE_ID
+    FOURSQUARE_SECRET
+    FOURSQUARE_PUSH_SECRET
+
+Bitly:
+  Where to obtain
+    https://bitly.com/a/account | API Key
+  Keys
+    BITLY_KEY
+    BITLY_USER
+
+
+
+
