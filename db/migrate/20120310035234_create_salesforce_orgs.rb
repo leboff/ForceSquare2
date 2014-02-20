@@ -1,4 +1,4 @@
-class CreateSalesforceOrgs < ActiveRecord::Migration
+class CreateSalesforceOrg < ActiveRecord::Migration
   def change
     create_table :salesforce_orgs do |t|
       t.integer :user_id
